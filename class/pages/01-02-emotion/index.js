@@ -1,13 +1,20 @@
-import { EmailInput, Wrapper } from '../../styles/emotion'
+export default function CouterDocumentPage(){
 
-export default function MyPage() {
+    function counter(){
+        const result = Number(document.getElementById("count").innerText) + 1
+        document.getElementById("count").innerText = result
+    }
 
-	// 자바스크립트 작성
+    // function counterminus(){
+    //     const result = Number(document.getElementById("count").innerText) - 1
+    //     document.getElementById("count").innerText = result
+    // }
 
-	return (
-		<Wrapper>
-			테스트중
-			<EmailInput type="text" />
-		</Wrapper>
-	)
+    return (
+        <div>
+            <div id="count">0</div>
+            <button onClick={counter}>카운트 올리기!!!</button>
+            {/* <button>카운트 내리기</button> */}
+        </div>
+    )
 }
